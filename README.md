@@ -28,7 +28,7 @@ The model analyzes the following characteristics:
 ## Quick Start (Recommended)
 
 ### Windows Users
-1. **Double-click** `setup_environment.bat` to create and set up the virtual environment
+1. **Double-click** `setup_env.bat` to create and set up the virtual environment
 2. **Double-click** `run_app.bat` to start the Streamlit app
 
 ### Mac/Linux Users
@@ -53,19 +53,19 @@ The model analyzes the following characteristics:
 1. **Create a virtual environment** (recommended):
    ```bash
    # Windows
-   python -m venv personality_env
+   python -m venv venv
    
    # Mac/Linux
-   python3 -m venv personality_env
+   python3 -m venv venv
    ```
 
 2. **Activate the virtual environment**:
    ```bash
    # Windows
-   personality_env\Scripts\activate.bat
+   venv\Scripts\activate.bat
    
    # Mac/Linux
-   source personality_env/bin/activate
+   source venv/bin/activate
    ```
 
 3. **Upgrade pip**:
@@ -91,10 +91,10 @@ The model analyzes the following characteristics:
 1. **Activate the virtual environment**:
    ```bash
    # Windows
-   personality_env\Scripts\activate.bat
+   venv\Scripts\activate.bat
    
    # Mac/Linux
-   source personality_env/bin/activate
+   source venv/bin/activate
    ```
 
 2. **Start the Streamlit app**:
@@ -146,16 +146,16 @@ Using a virtual environment provides several advantages:
 ## File Structure
 
 ```
+Extrovert_&_Introvert_Predictor/
 ├── streamlit_app.py          # Main Streamlit application
-├── predict_the_introverts_from_the_extroverts.py  # Original model training script
 ├── requirements.txt          # Python dependencies
-├── setup_environment.bat     # Windows environment setup script
+├── setup_env.bat            # Windows environment setup script
 ├── run_app.bat              # Windows app launcher
-├── setup_environment.sh      # Unix/Linux/Mac environment setup script
-├── run_app.sh               # Unix/Linux/Mac app launcher
-├── README.md               # This file
+├── WINDOWS_SETUP.md         # Windows-specific setup guide
+├── .gitignore               # Git ignore file
+├── README.md                # This file
 └── Data/
-    └── train.csv           # Training dataset
+    └── train.csv            # Training dataset
 ```
 
 ## Troubleshooting
@@ -171,10 +171,10 @@ Using a virtual environment provides several advantages:
 ### Activating the Environment
 ```bash
 # Windows
-personality_env\Scripts\activate.bat
+venv\Scripts\activate.bat
 
 # Mac/Linux
-source personality_env/bin/activate
+source venv/bin/activate
 ```
 
 ### Deactivating the Environment
@@ -185,10 +185,10 @@ deactivate
 ### Deleting the Environment (if needed)
 ```bash
 # Windows
-rmdir /s personality_env
+rmdir /s venv
 
 # Mac/Linux
-rm -rf personality_env
+rm -rf venv
 ```
 
 ## Contributing
